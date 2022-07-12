@@ -28,7 +28,7 @@ public class ParcelaRendaEntity {
     @Column(name = "data_pagamento")
     private LocalDate dataPagamento;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "renda_id")
     private RendaEntity renda;
 
